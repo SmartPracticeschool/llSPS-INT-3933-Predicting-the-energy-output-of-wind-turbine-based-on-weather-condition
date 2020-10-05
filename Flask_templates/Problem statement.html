@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+		 <style type="text/css">
+		 	.ps, .pstitle, #techstack, #algoUsed{
+				font-family: "calibri", Garamond, 'Comic Sans MS'; 
+		 	}
+		 	.ps{
+		 		font-size: 20;
+		 	}
+			 .jumbotron{
+   	 			background-color:#81b4d6;
+    			text-align:center;
+			}
+		 </style>
+	</head> 
+   <body> 
+     	<div class="jumbotron jumbotron-fluid">
+		  <div class="container">
+		    <h1 class="pstitle"><b>Problem Statement</b></h1>
+		    <hr>
+		    <p class = "ps">Wind energy plays an increasing role in the supply of energy world-wide. The energy output of a wind farm is highly dependent on the wind conditions present at its site. If the output can be predicted more accurately, energy suppliers can coordinate the collaborative production of different energy sources more efficiently to avoid costly overproduction.</p>
+		  </div>
+		</div>
+
+		<div class="container" id="techstack">
+			<h1><b>Technology Stack Used</b></h1>
+			<ul class="list-group">
+			  <li class="list-group-item">Python 3</li>
+			  <li class="list-group-item">Tensorflow 2.2.1 for building neural network</li>
+			  <li class="list-group-item">Flask for deployment</li>
+			  <li class="list-group-item">Bootstrap for front-end</li>
+			  <li class="list-group-item">IBM Watson for application deployment</li>
+			  <li class="list-group-item">Google Colab for model training</li>
+			</ul>
+		</div>
+		<br><br>
+		<div class="jumbotron jumbotron-fluid" id="algoUsed">
+		  <div class="container">
+			<h1><b>Multivariate Multi-Step LSTM Models</b></h1>
+			<hr>
+		    <p>There are those multivariate time series forecasting problems where the output series is separate but dependent upon the input time series, and multiple time steps are required for the output series.</p>
+		    <img src="../static/example.PNG" class="rounded" alt="Image" width="600" height="300">
+		    <h3>The neural network architecture designed for training</h3>
+		    <img src="../static/network.PNG" class="rounded" alt="Network architecture" width="600" height="300">
+		  </div>
+		</div>
+		<br>
+		<div class="container" id="techstack">
+			<h1><b>Hyperparameters</b></h1>
+			<ul class="list-group">
+			  <li class="list-group-item d-flex justify-content-between align-items-center">
+			    Epochs
+			    <span class="badge badge-primary badge-pill">{{ data.epochs }}</span>
+			  </li>
+			  <li class="list-group-item d-flex justify-content-between align-items-center">
+			    Batch Size
+			    <span class="badge badge-primary badge-pill">{{ data.batch_size }}</span>
+			  </li>
+			  <li class="list-group-item d-flex justify-content-between align-items-center">
+			    Learning Rate
+			    <span class="badge badge-primary badge-pill">{{ data.lr }}</span>
+			  </li>
+			  <li class="list-group-item d-flex justify-content-between align-items-center">
+			    Number of steps in
+			    <span class="badge badge-primary badge-pill">{{ data.n_steps_in }}</span>
+			  </li>
+			  <li class="list-group-item d-flex justify-content-between align-items-center">
+			    Number of steps out
+			    <span class="badge badge-primary badge-pill">{{ data.n_steps_out }}</span>
+			  </li>
+			  <li class="list-group-item d-flex justify-content-between align-items-center">
+			    Clip norm
+			    <span class="badge badge-primary badge-pill">{{ data.clip_norm }}</span>
+			  </li>
+			  
+			  
+			</ul>
+		</div>
+		<br><br>
+
+		<div class="container" id="techstack">
+			<h1>Features used for model building</h1>
+			<ul class="list-group">
+			  <li class="list-group-item">Wind Speend (m/s)</li>
+			  <li class="list-group-item">Theoretical power curve (KWh)</li>
+			  <li class="list-group-item">Wind direction</li>
+			  <li class="list-group-item">Wind gust (KM / h)</li>
+			  <li class="list-group-item">Dew Point in celcius</li>
+			  <li class="list-group-item">Wind chill in celcius</li>
+			</ul>
+		</div>
+		<br><br>
+		<div class="jumbotron jumbotron-fluid" id="algoUsed">
+		  <div class="container">
+			<h3><b>Correlation matrix using pearson method</b></h3>
+			<hr>
+		    <img src="../static/corrmatrix.png" class="rounded" alt="Image" width="600" height="500">
+		    <p>
+		    	From this matrix, we can clearly see that temperature, precipitation, humidity and pressure are showing no co-relation with Active power, therefore I did not considered them as features.
+		    </p>
+		    <h3><b>The loss during training</b></h3>
+		    <img src="../static/losses.png" class="rounded" alt="Network architecture" width="600" height="300">
+		    <p>
+		    	From the above graph, we can see that loss is continously decreasing with increasing number of epochs, we can further train the model inorder to solve this complex problem to achive better results.
+		    </p>
+		  </div>
+		</div>
+		<br><br>
+   </body> 
+</html>

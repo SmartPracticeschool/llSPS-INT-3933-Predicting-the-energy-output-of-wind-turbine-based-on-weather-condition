@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>Predicting The Energy Output Of Wind Turbine Based On Weather Condition</title>
+		<div class="header">
+			<h2>Predicting The Energy Output Of Wind Turbine Based On Weather Condition</h2>
+		  </div>
+
+			
+		<meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+		 <style type="text/css">
+
+			.header {
+  				padding: 20px;
+  				text-align: center;
+  				background: #61b5d6;
+  				color: rgb(0, 0, 0);
+				font-family: "Times New Roman", Times, serif;
+				font-weight: bold;
+  				font-size: 20px;
+			}
+			
+		 	
+		 	#myForm{
+		 		font-family: Impact, Charcoal, sans-serif;
+		 		width: 600px;
+		 		border-radius: 15px;
+		 		padding: 20px;
+		 		margin-top: 30px;
+		 	}
+			 input[type=text]:focus {
+  			background-color: rgb(204, 157, 26);
+			}
+		 </style>
+	</head> 
+   <body> 
+	<div style="background-image:linear-gradient(rgb(0, 255, 242), rgb(118, 211, 180), green); ;"></div>
+   		<div class="container">
+   			<center>
+   				<div class="jumbotron jumbotron-fluid" id="myForm">
+   				<form action="/predict" method="post">
+   					<div class="form-group">
+					    <label >Speed of wind in m/s</label>
+					    <input type="number" name="wind_speed" step="any" class="form-control">
+					</div>
+					<div class="form-group">
+					    <label >Power curve ( in KWh )</label>
+					    <input type="number" name="tpc" step="any" class="form-control">
+					</div>
+					<div class="form-group">
+					    <label >Direction of wind</label>
+					    <input type="number" name="wind_d" step="any" class="form-control">
+					</div>
+					<div class="form-group">
+					    <label >Wind gust in km/h</label>
+					    <input type="number" name="wind_gust" step="any" class="form-control">
+					</div>
+					<div class="form-group">
+					    <label >Dew point (celcius)</label>
+					    <input type="number" name="dew_point" step="any" class="form-control">
+					</div>
+					<div class="form-group">
+					    <label >Wind temperature (celcius)</label>
+					    <input type="number" step="any" name="wind_chill" class="form-control">
+					</div>
+					<div class="form-group">
+					    <input type="submit" value="Submit" class="btn btn-success">
+					</div>
+					
+   				</form>
+   			</div>
+   			</center>
+   		</div>
+   </body>
+
+ </html>

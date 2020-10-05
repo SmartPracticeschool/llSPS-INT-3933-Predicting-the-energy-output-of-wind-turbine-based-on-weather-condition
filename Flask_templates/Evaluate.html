@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+		  <style type="text/css">
+		  	#heading{
+		  		font-family:Arial, Helvetica, sans-serif;
+				font-size:20px
+		  	}
+		  	#myform{
+		  		width: 400px;
+		  		height: 300px;
+		  		margin-left: 350px;
+		  		padding:20px;
+		  		background-color: #6a9e9c;
+		  		border-radius: 10px;
+		  		margin-top: 20px;
+		  	}
+		  	.ps{
+		 		font-family: Arial, Helvetica, sans-serif;
+		 	}
+		  </style>
+	</head> 
+
+   <body> 
+      <div class="container">
+
+     	<form method="post" action="/evaluate">
+		  <div class="form-group" id="myform">
+			<label for="number" id="heading">Enter a number between 144 and 50458</label>
+			<hr>
+			<input type="number" class="form-control" name = "number" placeholder="Enter number" min="144" max="50458" id="number">
+			<hr>
+		    <input type="submit" class="btn btn-primary" value="Submit">
+		  </div>
+		    
+		  </form>
+
+     </div>
+     <br><br>
+     <div class="jumbotron jumbotron-fluid">
+     	<div class="container">
+		    <p class = "ps">The unavailability of any relevant API that provides the data for wind speed, gust, direction in real time, this model is built only using an already existing dataset.</p>
+		    <hr>
+
+		    <hr>
+		    <p class="ps">The problem statement asks for prediction of wind power in the next 72 hours which requires a lot of data training which was not possible due to lack of computation power and time</p>
+		  </div>
+     </div>
+   </body> 
+</html>
